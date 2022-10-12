@@ -4,4 +4,4 @@ copy . .
 run yarn
 run yarn build
 expose 4173
-cmd yarn preview
+cmd yarn preview --host
