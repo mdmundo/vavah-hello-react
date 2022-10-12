@@ -7,7 +7,7 @@ Write `Dockerfile` as follows:
 ```dockerfile
 from node:18
 workdir /app
-run git clone --depth 1 --single-branch https://github.com/mdmundo/vavah-hello-react .
+run git clone --depth 1 https://github.com/mdmundo/vavah-hello-react .
 run yarn
 run yarn build
 expose 4173
