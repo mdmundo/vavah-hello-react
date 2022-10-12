@@ -1,9 +1,12 @@
 from node:18
 workdir /app
-# https://docs.portainer.io/v/be-2.10/faq/troubleshooting/can-i-build-an-image-while-deploying-a-stack-application-from-git
-# https://docs.portainer.io/v/be-2.10/user/docker/images/build
-# Since Portainer does not fully support building images
-run git clone --depth 1 --single-branch https://github.com/mdmundo/vavah-hello-react .
+copy public/ public/
+copy src/ src/
+copy index.html index.html
+copy package.json package.json
+copy tsconfig.json tsconfig.json 
+copy tsconfig.node.json tsconfig.node.json
+copy vite.config.ts vite.config.ts
 run yarn
 run yarn build
 expose 4173
