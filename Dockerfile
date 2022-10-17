@@ -1,7 +1,7 @@
 from node:18
 workdir /app
-copy public/ .
-copy src/ .
+copy public/ public/
+copy src/ src/
 copy index.html .
 copy package.json .
 copy tsconfig.json .
